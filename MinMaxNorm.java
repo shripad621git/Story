@@ -45,5 +45,31 @@ class MinMaxNorm
     {
          System.out.println(arr[i]+"---Normalized value-->"+normArray[i]);
     }
+     double mean=0.0;
+    double sum=0.0;
+    for(i=0;i<arr.length;i++)
+    {
+         sum+=arr[i];
+    }
+    mean=sum/arr.length;
+    int n=arr.length;
+    double sd=0.0; 
+    double sqrsum=0.0;
+    for( i=0;i<n;i++)
+    {
+       sqrsum=sqrsum+(arr[i]-mean)*(arr[i]-mean);
+    }
+    sqrsum=sqrsum/n;
+    sd=Math.sqrt(sqrsum);
+    double zscore[]=new double[n];
+    for( i=0;i<n;i++)
+    {
+       zscore[i]=(arr[i]-mean)/sd;
+    }
+    System.out.println("Data item ------------->zscore");
+    for( i=0;i<n;i++)
+    {
+        System.out.println(arr[i]+" ------------->"+zscore[i]);
+    }
   }
 }    
