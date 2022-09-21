@@ -1,0 +1,8 @@
+Info Gain for Humidity
+0.15183550136234136
+info gain for temperature 
+0.029222565658954647
+info gain for windy
+0.04812703040826927
+info gain for laptops
+0.2467498197744391
